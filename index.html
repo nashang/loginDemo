@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>弹窗组件</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<input type="button" value="弹出弹窗" id="btn"/>
+		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/Window.js"></script>
+		<script>
+			$("#btn").click(function(){
+				new Window().alert({
+					content:"弹窗你好",
+					title:"温馨提醒",
+					handler:function(){
+						console.log("你点击了弹窗确定按钮");
+					},
+					width:300,
+					height:150,
+					hasCloseBtn:true,
+					btnText:"系统消息",
+					hasMask:true,
+					isDraggable:true,
+					dragHandle:".window-alert-header"
+				})
+			})
+		</script>
+	</body>
+</html>
